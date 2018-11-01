@@ -1,0 +1,7 @@
+ts <- read.csv("time_series.csv",header = F)
+corr <- ccf(ts$V2,ts$V4)
+corr2 <- ccf(ts$V3,ts$V4)
+corr3 <- ccf(ts$V2,ts$V3)
+max(corr$acf)
+max(corr2$acf)
+max(corr3$acf)
